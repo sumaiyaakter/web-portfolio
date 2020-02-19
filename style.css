@@ -1,17 +1,38 @@
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
-h1{
+h1, h2, h3, h4, h5, h6, p{
     padding: 0;
     margin: 0;
 }
 
+section{
+    height: 500px;
+}
+
+/*==================== Common Css ====================*/
 h1{
     font-size: 50px;
     text-transform: capitalize;
 }
-.name-highlight{
-    color: orange;
+h2{
+    text-transform: capitalize;
+    font-size: 41px;
+}
+p{
+    color: gray;
+}
+.link-btn{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: orange;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 700;
+    background-image: linear-gradient(45deg, lightSalmon, tomato);
 }
 .half-width{
     width: 40%;
@@ -21,4 +42,54 @@ h1{
 }
 .half-width img{
     width: 100%;
+}
+.orange-highlight{
+    color: orange;
+}
+
+/*==================== top banner css ====================*/
+.top-banner{
+    background-image: url("images/top-banner.png");
+    background-repeat: no-repeat;
+}
+.top-banner h1{
+    
+}
+
+/*==================== dream-area css ====================*/
+.dream-area{
+    background-image: url("images/dream-bg.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.dream-area h2{
+    
+}
+
+/*==================== experience-area css ====================*/
+.experience-area{
+    background-image: url("images/exp-bg.png");
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.single-experience{
+    box-shadow: 10px 10px 40px gray;
+    border-radius: 5px;
+    height: 80%;
+    background-color: #ffffff;
+}
+#full-stack{
+    border-left: 7px solid;
+    border-image: linear-gradient(180deg, lightSalmon, tomato);
+    border-image-slice: 1;
+}
+#baby-web{
+    border-left: 7px solid;
+    border-image: linear-gradient(180deg, blue, cyan);
+    border-image-slice: 1;
+}
+
+/*==================== footer css ====================*/
+.footer p{
+    text-align: center;
 }
