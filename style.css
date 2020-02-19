@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 section{
-    height: 500px;
+    padding-bottom: 120px;
 }
 
 /*==================== Common Css ====================*/
@@ -18,16 +18,23 @@ h1{
 }
 h2{
     text-transform: capitalize;
-    font-size: 41px;
+    font-size: 40px;
+    line-height: 40px;
+}
+h3{
+    font-size: 20px;
+    font-weight: 700;
 }
 p{
     color: gray;
+    font-size: 16px;
+    line-height: 26px;
 }
 .link-btn{
     text-decoration: none;
     text-transform: uppercase;
     background-color: orange;
-    padding: 12px 30px;
+    padding: 15px 30px;
     border-radius: 5px;
     font-size: 15px;
     color: #ffffff;
@@ -35,10 +42,7 @@ p{
     background-image: linear-gradient(45deg, lightSalmon, tomato);
 }
 .half-width{
-    width: 40%;
-    float: left;
-    margin-left: 5%;
-    padding-left: 2%;
+    margin: 0 50px;
 }
 .half-width img{
     width: 100%;
@@ -46,14 +50,17 @@ p{
 .orange-highlight{
     color: orange;
 }
+.top-banner p, .dream-area p{
+    margin-bottom: 65px;
+}
 
 /*==================== top banner css ====================*/
 .top-banner{
     background-image: url("images/top-banner.png");
     background-repeat: no-repeat;
 }
-.top-banner h1{
-    
+.top-banner h3{
+    margin-top: 15px;
 }
 
 /*==================== dream-area css ====================*/
@@ -63,7 +70,7 @@ p{
     background-position: right;
 }
 .dream-area h2{
-    
+    margin-bottom: 30px;
 }
 
 /*==================== experience-area css ====================*/
@@ -71,12 +78,33 @@ p{
     background-image: url("images/exp-bg.png");
     background-repeat: no-repeat;
     background-position: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.experience-area > h2{
+    margin-bottom: 50px;
+    margin-left: 7%;
 }
 .single-experience{
     box-shadow: 10px 10px 40px gray;
     border-radius: 5px;
     height: 80%;
     background-color: #ffffff;
+}
+.experience-area .half-width{
+    padding: 65px 25px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.experience-area .half-width h2{
+    margin-bottom: 30px;
+}
+.experience-area .half-width h3{
+    margin-bottom: 12px;
 }
 #full-stack{
     border-left: 7px solid;
@@ -92,4 +120,44 @@ p{
 /*==================== footer css ====================*/
 .footer p{
     text-align: center;
+    margin-bottom: 30px;
+
+}
+/*==================== Responssive css ====================*/
+@media only screen and (max-width: 991px) {
+    #full-stack{
+        margin-bottom: 30px;
+    }
+    .half-width:nth-child(1) {
+        margin-bottom: 65px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 42px;
+    }
+    h2{
+        font-size: 32px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .top-banner, .dream-area{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .top-banner .half-width:nth-child(1){
+        margin-bottom: 50px;
+    }
+   
+    .half-width{
+        width: 40%;
+    }
+    .experience-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .experience-area .half-width{
+        width: 37%;
+    }
 }
